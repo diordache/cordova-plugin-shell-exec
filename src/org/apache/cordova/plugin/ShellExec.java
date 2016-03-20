@@ -28,8 +28,8 @@ public boolean execute(String action, JSONArray args, CallbackContext callbackCo
                         String line = "";
                         while ((line = reader.readLine()) != null) {
                                 output.append(line + "\n");
-                                p.waitFor();
                         }
+                        p.waitFor();
                         exitStatus = p.exitValue();
                 }
                 catch (IOException e) {
